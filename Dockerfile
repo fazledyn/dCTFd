@@ -52,4 +52,7 @@ ENV PATH="/opt/venv/bin:$PATH"
 
 USER 1001
 EXPOSE 8000
+
+RUN chmod +x /opt/CTFd/docker-entrypoint.sh
+
 ENTRYPOINT ["/opt/CTFd/docker-entrypoint.sh"]
