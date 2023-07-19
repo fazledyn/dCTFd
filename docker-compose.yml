@@ -27,21 +27,19 @@ services:
       - .data/CTFd/logs:/var/log/CTFd
       - .data/CTFd/uploads:/var/uploads
       - .:/opt/CTFd:ro
-    # depends_on:
-    #   - db
-    # networks:
-    #     default:
-    #     internal:
+    networks:
+        default:
+        internal:
 
-  # nginx:
-  #   image: nginx:stable
-  #   restart: always
-  #   volumes:
-  #     - ./conf/nginx/http.conf:/etc/nginx/nginx.conf
-  #   ports:
-  #     - 80:80
-  #   depends_on:
-  #     - ctfd
+  nginx:
+    image: nginx:stable
+    restart: always
+    volumes:
+      - ./conf/nginx/http.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
+    depends_on:
+      - ctfd
 
   # db:
   #   image: mariadb:10.4.12
