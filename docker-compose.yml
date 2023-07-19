@@ -64,7 +64,7 @@ services:
   #   networks:
   #       internal:
 
-# networks:
-#     default:
-#     internal:
-#         internal: true
+networks:
+    default:
+    internal:
+        internal: true
