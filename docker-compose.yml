@@ -17,11 +17,11 @@ services:
       - DATABASE_URL=mysql+pymysql://doadmin:AVNS_3FAey36iLsJn1WiG1po@bcf23-mysql-do-user-14379091-0.b.db.ondigitalocean.com:25060/defaultdb
       - REDIS_URL=rediss://default:AVNS_ANGYKpKMTOUBXNoP4gu@bcf2023-redis-do-user-14379091-0.b.db.ondigitalocean.com:25061
       - UPLOAD_PROVIDER=s3
-      - UPLOAD_FOLDER=ctf_contents
+      - UPLOAD_FOLDER=/var/uploads
       - AWS_ACCESS_KEY_ID=DO00UKLYWFFQ9DW7XZBJ
       - AWS_SECRET_ACCESS_KEY=r8kPYjNkntJnxGD+QQaxGf7gQBWadZ7I219dBrlVx4Q
       - AWS_S3_BUCKET=bcf23-final
-      - AWS_S3_ENDPOINT_URL=https://bcf23-final.sgp1.digitaloceanspaces.com
+      - AWS_S3_ENDPOINT_URL=https://sgp1.digitaloceanspaces.com
       - AWS_S3_REGION=sgp1
     volumes:
       - .data/CTFd/logs:/var/log/CTFd
